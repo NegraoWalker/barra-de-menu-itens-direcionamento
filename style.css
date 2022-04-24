@@ -35,12 +35,53 @@
     display: flex;
 }
 
+.list li {
+    position: relative;
+    /*Coloquei o pai do itens como position:ralativo para usar como base a posição para posicionar os filhos*/
+}
+
 .list li a {
+    display: block;
     color: white;
     text-decoration: none;
     padding: 0.64rem;
 }
 
-.list li a:hover {
+.list>li:hover {
+    /* O operador > Seleciona todos os filhos-diretos do elemento. */
     background-color: #55D8C1;
+}
+
+.list>li:hover>.sublist {
+    /* O operador > Seleciona todos os filhos-diretos do elemento. */
+    display: block;
+}
+
+.sublist {
+    min-width: 110%;
+    background-color: #55D8C1;
+    display: none;
+    position: absolute;
+    top: 1.72rem;
+    list-style: none;
+    /*Os subitens não aparecem sem a passagem do mouse em cima. Por isso aplicamos o display:none */
+}
+
+.sublist li:hover {
+    background-color: black;
+}
+
+.sublist>li:hover>.sublist {
+    /* O operador > Seleciona todos os filhos-diretos do elemento. */
+    display: block;
+}
+
+.sublist li {
+    position: relative;
+}
+
+.sublist li .sublist {
+    position: absolute;
+    top: 0;
+    left: 100%;
 }

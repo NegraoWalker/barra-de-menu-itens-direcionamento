@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 0 10px black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.7rem;
+}
+
+.title {
+    color: white;
+    letter-spacing: -3px;
+}
+
+.title-part1 {
+    color: #55D8C1;
+}
+
+.title-part2 {
+    font-size: 0.8rem;
+    letter-spacing: normal;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+}
+
+.list li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.64rem;
+}
+
+.list li a:hover {
+    background-color: #55D8C1;
+}
